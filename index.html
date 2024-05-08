@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-family: "Hanken Grotesk", sans-serif;
+    }
+    .container {
+      width: 375px;
+    }
+
+    .subContainer {
+    }
+
+    #left {
+        display: flex;
+        flex-direction: column; /* Align children from top to bottom */
+        justify-content: flex-start; /* Align children at the start (top) of the container */
+        align-items: center; /* Center items horizontally */
+        background: rgb(119, 85, 255);
+        background: linear-gradient(180deg, rgba(119, 85, 255, 1) 0%, rgba(47, 44, 233, 1) 100%);
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+        height: 365px;
+        p {
+          width: 260px;
+          color: #CAC9FF;
+
+        }
+
+        h1 {
+          color: white;
+          font-size: 56px;
+          margin: 25px auto -20px auto;
+        }
+        h2 {
+          color: white;
+          font-size: 24px\;
+        }
+        h3 {
+          color: #CAC9FF;
+        }
+
+        #resultCircle {
+         p {
+          margin-left: -58px;
+          font-size: 16px;
+         }
+
+          height: 140px;
+          width: 140px;
+          border-radius: 50%;
+          background: rgb(77,33,201);
+          background: linear-gradient(180deg, rgba(77,33,201,1) 0%, rgba(37,33,201,0) 100%);
+        }  
+      }
+
+
+      #right {
+        background-color: white;
+      }
+
+    .spaceBetween {
+        display: flex;
+        justify-content: space-between;
+      }
+
+    .summaryContainer { 
+      #red {
+        p {
+          color: #FF5555;
+        }
+      }
+      #yellow {
+        p {
+          color: #FFB21E;
+        }
+      }
+      #green {
+        p {
+          color: #00BB8F;
+        }
+      }
+      #blue {
+        p {
+          color: #1125D6;
+        }
+      }
+    }
+
+    .summaryLeft {
+
+    }
+
+    .summaryRight {
+      .black {
+        color: black;
+      }
+      p {
+        color: #979ba7;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="subContainer" id="left">
+        <h3>Your Result</h3>
+        <div id="resultCircle">
+          <h1>76</h1>
+          <p>of 100</p>
+        </div>
+        <h2>Great</h2>
+        <p>Your performance exceed 65% of the people conducting the test here!</p>
+      </div>
+
+      <div class="subContainer" id="right">
+        <h3>Summary</h3>
+        <div id="summaryContainer">
+          <div id="red" class="spaceBetween">
+            <div class="summaryLeft">
+              <p><img src="assets/images/icon-reaction.svg">Reaction</p>
+            </div>
+            <div class="summaryRight">
+              <p><span class="black">80</span> / 100</p>
+            </div>
+          </div>
+
+          <div id="yellow" class="spaceBetween">
+            <div class="summaryLeft">
+              <p><img src="assets/images/icon-memory.svg">Memory</p>
+            </div>
+            <div class="summaryRight">
+              <p><span class="black">92</span> / 100</p>
+            </div>
+          </div>
+          
+          <div id="green" class="spaceBetween">
+            <div class="summaryLeft">
+              <p><img src="assets/images/icon-verbal.svg">Verbal</p>
+            </div>
+            <div class="summaryRight">
+              <p><span class="black">61</span> / 100</p>
+            </div>
+          </div>
+          
+          <div id="blue" class="spaceBetween">
+            <div class="summaryLeft">
+              <p><img src="assets/images/icon-visual.svg">Visual</p>
+            </div>
+            <div class="summaryRight">
+              <p><span class="black">73</span> / 100</p>
+            </div>
+          </div>
+        </div>
+        <button>Continue</button>
+      </div>
+    </div>
+</body>
+</html>
